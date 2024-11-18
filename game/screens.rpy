@@ -348,33 +348,39 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+
 screen main_menu():
 
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
+    ## tag menu
     tag menu
+    $ renpy.music.play(main_menu_music, loop=True, if_changed=True)  # Включаем музыку с циклическим воспроизведением
+    $ renpy.music.set_volume(0.5)
+    
+    add background_image
 
-    add gui.main_menu_background
+    # Используем imagemap для кнопок
+    imagemap:
+        # Задаем фон (background) и картинки для кнопок
+        ground background_image
+        idle button_idle
+        hover button_hover
 
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
+        # Кнопка "Начать игру"
+        hotspot (732, 518, 485, 104) action Start()
 
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
+        # Кнопка "Загрузить игру"
+        hotspot (785, 637, 402, 106) action ShowMenu("load")
 
-    if gui.show_name:
+        # Кнопка "О нас"
+        hotspot (732, 771, 473, 103) action ShowMenu("about")
 
-        vbox:
-            style "main_menu_vbox"
+        # Кнопка "Выход"
+        hotspot (860, 907, 266, 88) action Quit()
 
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+        # Кнопка настроек
+        hotspot (16, 29, 133, 133) action ShowMenu("preferences")
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox

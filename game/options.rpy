@@ -209,3 +209,18 @@ init python:
 ## разделённые дробью.
 
 # define build.itch_project = "renpytom/test-project"
+##define config.screen_width = 1280
+##define config.screen_height = 720
+define config.default_language = "russian"
+
+# В этом блоке мы будем работать с фоном и музыкой главного меню
+init python:
+    # Здесь задаём путь к музыкальному файлу
+    main_menu_music = "audio/BG Sound/main menu.mp3"
+    bg_music = "audio/BG Sound/bg scene test ver 1.mp3"
+    gp_sound = "audio/Sounds/gameplay.mp3"
+    unmute_sound = "audio/Sounds/unmute.mp3"
+    disconnect_sound = "audio/Sounds/disconnect.mp3"
+    background_image = "gui/background.png"  # Путь к фоновому изображению
+    button_idle = "gui/button/Mod Menu Buttons/ModMenuButton.png"  # Кнопка в обычном состоянии
+    button_hover = "gui/button/Mod Menu Buttons/ModMenuButtonLight.png"  # Кнопка в состоянии наведения
