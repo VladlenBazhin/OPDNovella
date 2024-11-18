@@ -25,8 +25,9 @@ label start:
     $ renpy.music.play(bg_music, loop=True)  # Включаем музыку с циклическим воспроизведением
     scene bg display
 
-    "Звуки геймплея."
     $ renpy.sound.play(gp_sound)
+    "Звуки геймплея."
+    
     window hide
     $ renpy.pause()
 
@@ -48,11 +49,11 @@ label start:
     $ renpy.pause()
     show dad talk 2 with dissolve 
 
-    dad "Ваня, я понимаю, что у тебя каникулы, что ты успешно закончил школу, но пора задуматься об институте."
+    dad "Ваня, я понимаю, что у тебя каникулы, что ты успешно закончил школу, но пора задуматься о выборе института."
     show dad normal small at Position(xalign=0.82) 
     show gg talk 2 small lt at Position(xalign=0.18)
 
-    gg "Пап, я помню скоро этим займусь."   
+    gg "Пап, я помню, скоро этим займусь."   
 
     dad "Надеюсь на это, сына."  
 
