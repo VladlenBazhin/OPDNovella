@@ -220,6 +220,7 @@ init python:
     bg_music = "audio/BG Sound/bg scene test ver 1.mp3"
     gp_sound = "audio/Sounds/gameplay.mp3"
     unmute_sound = "audio/Sounds/unmute.mp3"
+    crowd_sound = "audio/Sounds/crowd.ogg"
     disconnect_sound = "audio/Sounds/disconnect.mp3"
     background_image = "gui/background.png"  # Путь к фоновому изображению
     button_idle = "gui/button/Mod Menu Buttons/ModMenuButton.png"  # Кнопка в обычном состоянии
