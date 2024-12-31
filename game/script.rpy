@@ -201,7 +201,7 @@ label start:
 
     gg "Да! Не особо понятно было, но тьютор помог во всём разобраться."
 
-    hide gg nfirend
+    hide gg nfriend
     ##Scene 14-15
     scene bg class sad with dissolve
 
@@ -231,7 +231,7 @@ label start:
         show nfriend talk 2 small at Position(xalign=0.82)
 
         hide gg 
-        hide nfirend
+        hide nfriend
 
         newFriend "Ты какой-то задумчивый, что случилось?"
 
@@ -275,7 +275,7 @@ label notLike:
 
     gg "Согласен. Надо держаться и не сдаваться!"
     
-    hide gg nfirend
+    hide gg nfriend
     ##scene 16
     scene bg hostel
     storyteller "заканчивается 1-й семестр."
@@ -752,8 +752,8 @@ label diplom:
     dad "А работать ты где будешь?"
 
     hide gg 
-    hide dad 
     hide mom 
+    hide dad
 
     menu:
         "Мне пришло приглашение на собеседование в очень неплохую IT компанию, схожу туда и посмотрю, что мне смогут там предложить.":
