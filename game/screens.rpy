@@ -368,19 +368,208 @@ screen main_menu():
         hover button_hover
 
         # Кнопка "Начать игру"
-        hotspot (732, 518, 485, 104) action Start()
+        hotspot (710, 540, 470, 100) action Start()
 
         # Кнопка "Загрузить игру"
-        hotspot (785, 637, 402, 106) action ShowMenu("load")
+        hotspot (740, 660, 390, 100) action ShowMenu("load")
 
         # Кнопка "О нас"
-        hotspot (732, 771, 473, 103) action ShowMenu("about")
+        hotspot (710, 790, 460, 100) action ShowMenu("about")
 
         # Кнопка "Выход"
-        hotspot (860, 907, 266, 88) action Quit()
+        hotspot (800, 915, 266, 85) action Quit()
 
         # Кнопка настроек
-        hotspot (16, 29, 133, 133) action ShowMenu("preferences")
+        hotspot (20, 20, 164, 164) action ShowMenu("preferences")
+
+screen choice_menu():
+    # Установите изображение фона.
+    add background_choice_menu
+    
+    # Кнопка 1
+    textbutton "3-D моделирование для игровой или смежной сферы" action Return("modeling") xpos 343 ypos 209
+    
+    # Кнопка 2
+    textbutton "Python разработчик" action Return("python") xpos 343 ypos 254
+    
+    # Кнопка 3
+    textbutton "Системное администрирование" action Return("sysadmin") xpos 343 ypos 299
+
+    # Кнопка 4
+    textbutton "UX/UI дизайн" action Return("design") xpos 343 ypos 344
+
+##Exam Modeling
+screen modeling_question1():
+
+    add bg_modeling_question1
+
+
+    imagemap:
+        ground bg_modeling_question1
+        idle button_modeling_question1_idle
+        hover button_modeling_question1_hover
+
+        hotspot (590, 502, 807, 40) action Return("right")
+        hotspot (590, 550, 316, 34) action Return("wrong")
+        hotspot (590, 597, 250, 34) action Return("wrong")
+        hotspot (590, 640, 216, 30) action Return("wrong")
+
+screen modeling_question2():
+
+    add bg_modeling_question2
+
+
+    imagemap:
+        ground bg_modeling_question2
+        idle button_modeling_question2_idle
+        hover button_modeling_question2_hover
+
+        hotspot (590, 500, 320, 40) action Return("wrong")
+        hotspot (590, 550, 265, 34) action Return("wrong")
+        hotspot (590, 597, 389, 30) action Return("right")
+        hotspot (590, 640, 165, 33) action Return("wrong")
+
+screen modeling_question3():
+
+    add bg_modeling_question3
+
+
+    imagemap:
+        ground bg_modeling_question3
+        idle button_modeling_question3_idle
+        hover button_modeling_question3_hover
+
+        hotspot (590, 540, 152, 45) action Return("wrong")
+        hotspot (590, 595, 114, 32) action Return("right")
+
+##Exam Python
+screen python_question1():
+
+    add bg_python_question1
+
+
+    imagemap:
+        ground bg_python_question1
+        idle button_python_question1_idle
+        hover button_python_question1_hover
+
+        hotspot (590, 510, 1037, 130) action Return("right")
+        hotspot (590, 657, 1093, 100) action Return("wrong")
+
+
+screen python_question2():
+
+    add bg_python_question2
+
+
+    imagemap:
+        ground bg_python_question2
+        idle button_python_question2_idle
+        hover button_python_question2_hover
+
+        hotspot (590, 661, 476, 32) action Return("wrong")
+        hotspot (590, 708, 497, 30) action Return("wrong")
+        hotspot (590, 750, 643, 32) action Return("right")
+
+screen python_question3():
+
+    add bg_python_question3
+
+
+    imagemap:
+        ground bg_python_question3
+        idle button_python_question3_idle
+        hover button_python_question3_hover
+
+
+        hotspot (590, 665, 764, 33) action Return("wrong")
+        hotspot (590, 715, 865, 33) action Return("right")
+
+##Exam Sysadmin
+screen sysadmin_question1():
+
+    add bg_sysadmin_question1
+
+
+    imagemap:
+        ground bg_sysadmin_question1
+        idle button_sysadmin_question1_idle
+        hover button_sysadmin_question1_hover
+
+        hotspot (590, 505, 921, 35) action Return("wrong")
+        hotspot (590, 554, 512, 30) action Return("wrong")
+        hotspot (590, 596, 1104, 33) action Return("wrong")
+        hotspot (590, 641, 1006, 63) action Return("right")
+
+screen sysadmin_question2():
+
+    add bg_sysadmin_question2
+
+
+    imagemap:
+        ground bg_sysadmin_question2
+        idle button_sysadmin_question2_idle
+        hover button_sysadmin_question2_hover
+
+        hotspot (590, 506, 212, 30) action Return("wrong")
+        hotspot (590, 553, 633, 32) action Return("wrong")
+        hotspot (590, 597, 443, 31) action Return("wrong")
+        hotspot (590, 640, 809, 31) action Return("right")
+
+screen sysadmin_question3():
+
+    add bg_sysadmin_question3
+
+
+    imagemap:
+        ground bg_sysadmin_question3
+        idle button_sysadmin_question3_idle
+        hover button_sysadmin_question3_hover
+
+        hotspot (590, 506, 160, 28) action Return("right")
+        hotspot (590, 554, 121, 27) action Return("wrong")
+        hotspot (590, 595, 121, 28) action Return("wrong")
+        hotspot (590, 640, 144, 29) action Return("wrong")
+
+##Exam Design
+screen design_question1():
+
+    add bg_design_question1
+
+
+    imagemap:
+        ground bg_design_question1
+        idle button_design_question1_idle
+        hover button_design_question1_hover
+
+        hotspot (590, 555, 154, 28) action Return("wrong")
+        hotspot (590, 597, 124, 31) action Return("right")
+
+screen design_question2():
+
+    add bg_design_question2
+
+
+    imagemap:
+        ground bg_design_question2
+        idle button_design_question2_idle
+        hover button_design_question2_hover
+
+        hotspot (667, 542, 438, 394) action Return("right")
+        hotspot (1138, 540, 442, 403) action Return("wrong")
+
+screen design_question3():
+
+    add bg_design_question3
+
+
+    imagemap:
+        ground bg_design_question3
+        idle button_design_question3_idle
+        hover button_design_question3_hover
+
+        hotspot (667, 538, 476, 445) action Return("wrong")
+        hotspot (1138, 539, 468, 445) action Return("right")
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -562,12 +751,26 @@ screen about():
 
         vbox:
 
-            label "[config.name!t]"
+            label "Строки жизни"
             text _("Версия [config.version!t]\n")
 
             ## gui.about обычно установлено в options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+            ##if gui.about:
+            ##    text "[gui.about!t]\n"
+            text"Релиз подготовила команда Максимум\n"
+            text"Тимлид - Шашов Максим, студент группы РИ-140930"
+            text"Дизайнер - Пьянкова Екатерина, студенка группы РИ-140930"
+            text"Геймдизайнер - Кравченко Роман, студент группы РИ-140940"
+            text"Аналитик - Солдатов Семён, студент группы РИ-140930"
+            text"Программист - Бажин Владлен, студент группы РИ-140932"
+            text"Отдельная благодарность:\n"
+            text"Ресурсу по обучению Ren`Py - {a=https://www.kurs.kosmo.top/}https://www.kurs.kosmo.top/{/a}"
+            text"Банкам бесплатной музыки - {a=https://freesound.org/}https://freesound.org/{/a}; {a=https://pixabay.com/}https://pixabay.com/{/a}\n"
+            text"Используемая музыка:\n"
+            textbutton "axtoncrolley - Rainy Day Sidewalking" action OpenURL("https://freesound.org/people/axtoncrolley/sounds/99896/")
+            textbutton"Sunsai - Menu Background Music" action OpenURL("https://freesound.org/people/Sunsai/sounds/415805/")
+            textbutton"DatSimDude - My turn" action OpenURL("https://freesound.org/people/DatSimDude/sounds/77178/")
+            textbutton "Music_Unlimited - Far Away (Lo-Fi Hip-Hop Background Music)\n" action OpenURL("https://pixabay.com/ru/music/far-away-lo-fi-hip-hop-background-music-151495/")
 
             text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
